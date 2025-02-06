@@ -59,14 +59,26 @@
             height: auto;
         }
         .description-container {
-            background-color: #323659; /* Background color */
-            box-shadow: 10px 10px 15px #5474a1; /* Shadow effect */
+            background-color: #323659; /* Darker background color */
             padding: 20px;
             max-width: 45%; /* Set a limit on the text width */
             color: white; /* Text color */
             font-size: 16px;
             line-height: 1.6;
             border-radius: 10px; /* Optional, for rounded corners */
+            position: relative;
+        }
+
+        /* Adding the layered effect on the bottom-right */
+        .description-container::after {
+            content: '';
+            position: absolute;
+            bottom: -10px; /* Position the border just below the container */
+            right: -10px; /* Position the border to the right */
+            width: 30px; /* The width of the "layered" box */
+            height: 30px; /* The height of the "layered" box */
+            background-color: #5474a1; /* Lighter blue color for the outline */
+            border-radius: 5px; /* Rounded corners for the "layer" effect */
         }
     </style>
 </head>
