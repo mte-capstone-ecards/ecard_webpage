@@ -60,6 +60,7 @@
         }
         .description-container {
             background-color: #323659; /* Darker background color */
+            z-index: 2;
             padding: 20px;
             max-width: 45%; /* Set a limit on the text width */
             color: #e7ba80; /* Text color */
@@ -73,10 +74,11 @@
         .description-container::after {
             content: '';
             position: absolute;
+            z-index: 1;
             bottom: -10px; /* Position the border just below the container */
             right: -10px; /* Position the border to the right */
-            width: 30px; /* The width of the "layered" box */
-            height: 30px; /* The height of the "layered" box */
+            width: 120px; /* The width of the "layered" box */
+            height: 120px; /* The height of the "layered" box */
             background-color: #5474a1; /* Lighter blue color for the outline */
             border-radius: 5px; /* Rounded corners for the "layer" effect */
         }
