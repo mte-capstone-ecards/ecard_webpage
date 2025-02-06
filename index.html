@@ -56,10 +56,15 @@
             max-width: 50%; /* Set the width of the box image */
             height: auto;
         }
-        .description {
+        .description-container {
+            background-color: #323659; /* Background color */
+            box-shadow: 10px 10px 15px #5474a1; /* Shadow effect */
+            padding: 20px;
             max-width: 45%; /* Set a limit on the text width */
+            color: white; /* Text color */
             font-size: 16px;
             line-height: 1.6;
+            border-radius: 10px; /* Optional, for rounded corners */
         }
     </style>
 </head>
@@ -79,7 +84,7 @@
      <!-- Content Section with Image on Left and Text on Right -->
     <div class="content">
         <img src="ecard_box.png" alt="E-card Box" class="box-image">
-        <div class="description">
+        <div class="description-container">
             <p>Our capstone project is creating wirelessly controlled, re-writable, tactile playing cards and a controller box that can run an expandable set of card games. The cards receive display data and power with a simple tap over NFC from the controller without any batteries. The cards are light and thin, similar to traditional playing cards. A wide variety of classic and modern card games can be played seamlessly, with standard cards or fully custom designs for the cards and limitless game logic hosted on the controller.</p>
         </div>
     </div>
