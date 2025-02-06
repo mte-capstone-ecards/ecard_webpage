@@ -1,75 +1,323 @@
+Open sidebar
+
+ChatGPT
+
+You said:
+I need to create a basic website to showcase a project, what would be a good platform to quickly do that? 
+ChatGPT said:
+For a quick and effective way to showcase your project, consider these options:
+
+GitHub Pages – If your project is on GitHub, you can host a simple static site for free. Supports HTML, CSS, JavaScript, and Jekyll.
+
+Pros: Free, easy to set up, supports custom domains.
+Cons: Requires a GitHub repository.
+Netlify – Great for static sites with easy deployment from GitHub.
+
+Pros: Free tier, continuous deployment, custom domain support.
+Cons: Might require some setup if you're new to it.
+Vercel – Ideal for React and Next.js projects.
+
+Pros: Fast deployment, good for dynamic content.
+Cons: Slightly more complex than GitHub Pages.
+Carrd – If you want something very simple and aesthetic.
+
+Pros: Drag-and-drop interface, very quick setup.
+Cons: Limited customization on the free plan.
+WordPress.com – Good for blog-style or content-heavy pages.
+
+Pros: Easy to use, lots of templates.
+Cons: Free plan has ads and limited features.
+Google Sites – If you need something super quick with zero coding.
+
+Pros: Free, integrates with Google services.
+Cons: Limited design flexibility.
+If you need something very quick and simple, Carrd or Google Sites work well. If you want more control, GitHub Pages or Netlify are great. Which one suits your needs best?
+
+
+
+
+
+
+You said:
+Uploaded image
+I have my webpage for a project that I am working on, can you help me make a basic website? its hosted on github oages? Can you start by making a simple page with a dropdown. Something like this, but with the webpage title Noname Ecards
+ChatGPT said:
+Got it! I'll create a simple webpage with a dropdown menu and the title Noname Ecards, similar in style to the example you provided. I'll generate the HTML, CSS, and JavaScript for you. Give me a moment.
+
+Here's a simple webpage with a dropdown menu and the title Noname Ecards. It has a clean design with a navigation bar, a dropdown menu, and a welcome message. Let me know if you need any modifications!
+
+
+
+
+
+
+You said:
+do i just put this in its own file in my github project? 
+ChatGPT said:
+Yes! Follow these steps to add it to your GitHub Pages project:
+
+Create an HTML file
+
+Save the provided code as index.html in your GitHub repository.
+Push it to GitHub
+
+If your project is already set up on GitHub, just add and commit the file:
+git add index.html
+git commit -m "Add basic Noname Ecards webpage"
+git push
+Enable GitHub Pages (if not already enabled)
+
+Go to your repository on GitHub.
+Click Settings > Pages.
+Under Branch, select main (or your default branch).
+Click Save.
+Access your site
+
+Your website should be live at:
+https://yourusername.github.io/repository-name/
+Let me know if you need help with any step! 🚀
+
+
+
+
+
+
+You said:
+Uploaded image
+When I go there it just looks like the strandard webpage? https://mte-capstone-ecards.github.io/ecard_webpage/ 
+ChatGPT said:
+It looks like GitHub Pages might not be serving your index.html correctly. Try these steps to fix it:
+
+Check GitHub Pages Settings
+
+Go to Settings → Pages in your repository.
+Ensure Source is set to the correct branch (main in your case).
+If needed, change it and click Save.
+Ensure index.html is in the root directory
+
+GitHub Pages requires index.html to be in the root of the repository (or inside a /docs folder if configured that way).
+Your file is in the repository, so this is likely fine.
+Force a Refresh
+
+Sometimes GitHub Pages caches the page. Try Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac) to refresh.
+Check for Errors in Console
+
+Open Developer Tools (F12 or Ctrl+Shift+I in Chrome) and check the Console for errors.
+Wait a Few Minutes
+
+GitHub Pages can take a few minutes to update after a push.
+If it still doesn’t work, let me know what you see when visiting the page! 🚀
+
+
+
+
+
+
+You said:
+Uploaded image
+Ok can you change the title on the index.html font to be commuters sans? I also want something more Like tghis: 
+ChatGPT said:
+Got it! I'll update the index.html with:
+
+Commuters Sans as the font for the title.
+A layout similar to your sketch, with:
+"Noname Ecards" as the title.
+A hamburger menu that expands into a dropdown with "About, Timeline, Technology, Team, Photos".
+A placeholder for the 3D card in the center.
+Here's the updated HTML & CSS:
+
+
+Answer in chat instead
+
+
+
+
+Search
+
+Reason
+
+ChatGPT can make mistakes. Check important info.
+?
+
+
+Noname Ecards
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noname Ecards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fdfbec;
-            color: #1a1a1a;
-            text-align: center;
+            font-family: 'Commissioner', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #FDFBF5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .navbar {
+            width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
         }
         .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropbtn {
-            background-color: #0044cc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .dropdown-content {
             display: none;
             position: absolute;
+            right: 20px;
+            top: 60px;
             background-color: white;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 10px;
         }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
+        .dropdown a {
             display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
         }
-        .dropdown-content a:hover {
+        .dropdown a:hover {
             background-color: #f1f1f1;
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        h1 {
+        .content {
             margin-top: 50px;
+        }
+        .card-placeholder {
+            width: 200px;
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
+        <div class="title">Noname Ecards</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </div>
-    <h1>Welcome to Noname Ecards</h1>
-    <p>Your place for simple, elegant digital cards.</p>
+    <div class="dropdown" id="menu">
+        <a href="#about">About</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#technology">Technology</a>
+        <a href="#team">Team</a>
+        <a href="#photos">Photos</a>
+    </div>
+    <div class="content">
+        <div class="card-placeholder">3D Card</div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
+
+Ask ChatGPT to edit
