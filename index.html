@@ -4,85 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noname Ecards</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commuters+Sans:wght@400;700&display=swap">
     <style>
         body {
-            font-family: 'Commissioner', sans-serif;
+            font-family: 'Commuters Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FDFBF5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: #fdfcf8;
         }
         .navbar {
-            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
         .title {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 700;
         }
-        .menu-icon {
-            cursor: pointer;
+        .menu-button {
             font-size: 24px;
+            cursor: pointer;
         }
-        .dropdown {
+        .menu {
             display: none;
             position: absolute;
+            top: 50px;
             right: 20px;
-            top: 60px;
-            background-color: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background: white;
             padding: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .dropdown a {
+        .menu a {
             display: block;
-            padding: 10px;
+            padding: 5px 10px;
             text-decoration: none;
             color: black;
         }
-        .dropdown a:hover {
-            background-color: #f1f1f1;
-        }
-        .content {
-            margin-top: 50px;
-        }
-        .card-placeholder {
-            width: 200px;
-            height: 100px;
-            background-color: #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
+        .menu a:hover {
+            background: lightgray;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="title">Noname Ecards</div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
     </div>
-    <div class="dropdown" id="menu">
+    <div class="menu" id="dropdownMenu">
         <a href="#about">About</a>
         <a href="#timeline">Timeline</a>
         <a href="#technology">Technology</a>
         <a href="#team">Team</a>
         <a href="#photos">Photos</a>
     </div>
-    <div class="content">
-        <div class="card-placeholder">3D Card</div>
-    </div>
     <script>
         function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+            var menu = document.getElementById('dropdownMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
