@@ -52,6 +52,15 @@
         .menu a:hover {
             background: lightgray;
         }
+        .box-image {
+            max-width: 50%; /* Set the width of the box image */
+            height: auto;
+        }
+        .description {
+            max-width: 45%; /* Set a limit on the text width */
+            font-size: 16px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -67,7 +76,13 @@
         <a href="#team">Team</a>
         <a href="#photos">Photos</a>
     </div>
-    <img src="ecard_box.png" alt="E-card Box">
+     <!-- Content Section with Image on Left and Text on Right -->
+    <div class="content">
+        <img src="ecard_box.png" alt="E-card Box" class="box-image">
+        <div class="description">
+            <p>Our capstone project is creating wirelessly controlled, re-writable, tactile playing cards and a controller box that can run an expandable set of card games. The cards receive display data and power with a simple tap over NFC from the controller without any batteries. The cards are light and thin, similar to traditional playing cards. A wide variety of classic and modern card games can be played seamlessly, with standard cards or fully custom designs for the cards and limitless game logic hosted on the controller.</p>
+        </div>
+    </div>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('dropdownMenu');
