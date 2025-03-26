@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - E-Cards</title>
+    <title>Technologies - E-Cards</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -22,8 +22,8 @@
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            width: 120px; /* Adjust logo size */
-            margin-right: 10px; /* Space between logo and title */
+            width: 120px;
+            margin-right: 10px;
         }
         .title {
             font-family: 'Hanken Grotesk', sans-serif;
@@ -53,47 +53,63 @@
         .menu a:hover {
             background: lightgray;
         }
-        .box-image {
-            max-width: 50%; /* Set the width of the box image */
-            height: auto;
-        }
-        .team-container {
+        .content-container {
             text-align: center;
             padding: 50px;
         }
-        .team-photo {
-            max-width: 100%;
+        .content-container h2 {
+            font-size: 32px;
+            color: #323659;
+        }
+        .content-container p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .sponsor-photo-1{
+            max-width: 80%; /* Adjust this value to control the size of the image */
             height: auto;
             border-radius: 10px;
         }
-        .caption {
-            font-size: 14px;
-            color: #2A7669 ; /* Change this to any color you prefer */
-            margin-top: 10px;
-            font-style: italic;
+        .sponsor-photo-2 {
+            max-width: 70%; /* Adjust this value to control the size of the image */
+            height: auto;
+            border-radius: 10px;
+        }
+        .sponsor-photo-3 {
+            max-width: 50%; /* Adjust this value to control the size of the image */
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <img src="other\highres_electronic_cards.png" alt="Logo" class="logo">
+        <img src="other/highres_electronic_cards.png" alt="Logo" class="logo">
         <div class="title">E-CARDS</div>
         <div class="menu-button" onclick="toggleMenu()">☰</div>
     </div>
     <div class="menu" id="dropdownMenu">
         <a href="index.html">About</a>
         <a href="https://www.notion.so/64360cc07d1e4943969bc6a14ef196ec?v=42ae8c49fe17432289d5741c90791d9a&pvs=4" target="_blank">Timeline</a>
-        <a href="#technologies">Technologies</a>
+        <a href="technologies.html">Technologies</a>
         <a href="team.html">Team</a>
-        <a href="Sponsors.html">Sponsors</a>
+        <a href="sponsors.html">Sponsors</a>
     </div>
 
-    <!-- Team Content -->
-    <div class="team-container">
-        <h2>Meet Our Mechatronics Capstone Team!</h2>
-        <img src="other\capstone_team_photo.jpg" alt="Team Photo" class="team-photo">
-        <p class="caption">From left to right: Guy Blumenthal (firmware), Isabella Schneider (electrical), Avi Cahoon (electrical), Dexter Siu (mechanical), Elizabeth Jung-Torres (firmware)</p>
+    <div class="content-container">
+        <h2>Thank you to Our Sponsors!</h2>
+        <img src="sponsors\YNE.png" alt="YNE" class="sponsor-photo-1">
+        <p>Thank you to YNE Automatizacion for your generous donation! Learn more about their mechatronics manufacturing designs at https://ynemx.com/</p>
+        <img src="sponsors\Pervasive.png" alt="Pervasive Displays" class="sponsor-photo-2"> <!-- Left-aligned -->
+        <p>Thank you to Pervasive Displays for your donation of E-Paper displays. Learn more about their unique e-paper displays at https://www.pervasivedisplays.com/</p>
+        <img src="sponsors\UW.png" alt="Uwaterloo" class="sponsor-photo-3"> <!-- Left-aligned -->
+        <p>Thank you to UWaterloo for your funding!</p>
+
     </div>
+
 
     <script>
         function toggleMenu() {

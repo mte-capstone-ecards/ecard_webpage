@@ -54,13 +54,19 @@
         .menu a:hover {
             background: lightgray;
         }
+        /* Parent container to hold image and description side by side */
+        .content-container {
+            display: flex; /* Enables side-by-side layout */
+            align-items: center; /* Aligns items vertically */
+            gap: 20px; /* Adds spacing between image and text box */
+        }
         .box-image {
             max-width: 50%; /* Set the width of the box image */
             height: auto;
         }
+        
         .description-container {
             background-color: #102542 ; /* Darker background color */
-            z-index: 1;
             padding: 20px;
             max-width: 45%; /* Set a limit on the text width */
             color: #E1ECCD; /* Text color */
@@ -69,18 +75,17 @@
             border-radius: 10px; /* Optional, for rounded corners */
             position: relative;
         }
-
-        /* Adding the layered effect on the bottom-right */
-        .description-container::after {
-            content: '';
+         /* Adding the layered effect on the bottom-right */
+         .description-container::before {
+            content: ''; /* Required for pseudo-elements */
             position: absolute;
-            z-index: 2;
-            bottom: -10px; /* Position the border just below the container */
-            right: -10px; /* Position the border to the right */
-            width: 120px; /* The width of the "layered" box */
-            height: 120px; /* The height of the "layered" box */
+            z-index: -1;
+            top: 10px;
+            left: 10px; /* Position the border to the right */
+            width: 100%; /* The width of the "layered" box */
+            height: 100%; /* The height of the "layered" box */
             background-color: #2A7669; /* Lighter blue color for the outline */
-            border-radius: 5px; /* Rounded corners for the "layer" effect */
+            border-radius: 10px; /* Rounded corners for the "layer" effect */
         }
         .team-container {
             text-align: center;
@@ -102,13 +107,13 @@
     <div class="menu" id="dropdownMenu">
         <a href="index.html">About</a>
         <a href="https://www.notion.so/64360cc07d1e4943969bc6a14ef196ec?v=42ae8c49fe17432289d5741c90791d9a&pvs=4" target="_blank">Timeline</a>
-        <a href="#technology">Technology</a>
+        <a href="technologies.html">Technology</a>
         <a href="team.html">Team</a>
-        <a href="#photos">Photos</a>
+        <a href="sponsors.html">Sponsors</a>
     </div>
      <!-- Content Section with Image on Left and Text on Right -->
-    <div class="content">
-        <img src="controller_images\ecard_box.png" alt="E-card Box" class="box-image">
+     <div class="content-container">
+        <img src="controller_images\back_controller.png" alt="E-card Box" class="box-image">
         <div class="description-container">
             <p>Our capstone project is creating wirelessly controlled, re-writable, tactile playing cards and a controller box that can run an expandable set of card games. The cards receive display data and power with a simple tap over NFC from the controller without any batteries. The cards are light and thin, similar to traditional playing cards. A wide variety of classic and modern card games can be played seamlessly, with standard cards or fully custom designs for the cards and limitless game logic hosted on the controller.</p>
         </div>
